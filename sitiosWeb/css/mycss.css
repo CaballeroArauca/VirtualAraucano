@@ -1,0 +1,30 @@
+body,html{
+     
+    background:url(../img/fondo2.png);
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+ 	
+}
+
+@media only screen and (max-width: 767px) {
+
+  body {
+    background-image: url(../img/fondo2.png);
+
+  }
+
+}
+
+.login{
+    background:#4CB3C9;
+    color: #FFF;
+    margin-top: 15%;
+    padding: 10px 50px 30px 50px;
+}
+
+
+
+
+
