@@ -1,23 +1,29 @@
 function Calcular(){	
-	var Expresion, Escenario, Afinacion;
-	Expresion = (document.getElementById("Expresion").value);
-	Escenario = (document.getElementById("Escenario").value);
-	Afinacion = (document.getElementById("Afinacion").value);
-	if ($.trim(Expresion).length > 0) {
-		Expresion = parseInt(Expresion) * 0.2;
+	var Expresion, Escenario, calificacion_4;
+	calificacion_1 = (document.getElementById("calificacion_1").value);
+	calificacion_2 = (document.getElementById("calificacion_2").value);
+	calificacion_3 = (document.getElementById("calificacion_3").value);
+	calificacion_4 = (document.getElementById("calificacion_4").value);
+	if ($.trim(calificacion_1).length > 0) {
+		calificacion_1 = parseInt(calificacion_1) * 0.25;
 	}else{
-		Expresion = 0;
+		calificacion_1 = 0;
 	}
-	if ($.trim(Escenario).length > 0) {
-		Escenario = parseInt(Escenario) * 0.2;
+	if ($.trim(calificacion_2).length > 0) {
+		calificacion_2 = parseInt(calificacion_2) * 0.25;
 	}else{
-		Escenario = 0;
+		calificacion_2 = 0;
 	}
-	if ($.trim(Afinacion).length > 0) {
-		Afinacion = parseInt(Afinacion) * 0.6;
+	if ($.trim(calificacion_3).length > 0) {
+		calificacion_3 = parseInt(calificacion_3) * 0.25;
 	}else{
-		Afinacion = 0;
+		calificacion_3 = 0;
 	}
-	puntaje = Expresion + Escenario + Afinacion;
+	if ($.trim(calificacion_4).length > 0) {
+		calificacion_4 = parseInt(calificacion_4) * 0.25;
+	}else{
+		calificacion_4 = 0;
+	}
+	puntaje = calificacion_1 + calificacion_2 + calificacion_3 + calificacion_4;
 	document.getElementById("total").innerHTML= puntaje.toFixed(1);
 }
