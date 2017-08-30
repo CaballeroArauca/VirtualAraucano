@@ -31,11 +31,11 @@ $(document).ready(function() {
 					password:password
 				},
 				success:function(data) {
-					if (data.trim() == "error") {
+					if (data.trim() == "exito") {
+						$(location).attr('href','index.php');
+					}else{
 						$("#alert").html(alerta);
 				        $("#alerta").html("El usuario o Contraseña son incorrectas");
-					}else{
-						alert(data);
 					}
 				}
 			});

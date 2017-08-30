@@ -70,7 +70,7 @@
 			$_SESSION['nombre'] = $this->_Nombre;
 			$_SESSION['apellido'] = $this->_Apellido;
 			$_SESSION['rol'] = $this->_Rol;
-			header('Location:../../sitiosWeb/html/index.html');
+			echo "exito";
 		}
 
 		public function salir(){
