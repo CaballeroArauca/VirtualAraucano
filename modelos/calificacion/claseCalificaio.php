@@ -4,27 +4,12 @@
 
 		class Calificaciones extends mySql{
 
-			private $_Jurado;
-			private $_Grupo;
 			private $_Calificacion_1;
 			private $_Calificacion_2;
 			private $_Calificacion_3;
 			private $_Calificacion_4;
 
 
-		public function set_Jurado($Jurado) {
-			$this->_Jurado = $Jurado;	
-		}
-
-		Public function get_Jurado() {
-				return $this->_Jurado;
-		}
-		public function set_Grupo($Grupo) {
-			$this->_Grupo = $Grupo;	
-		}
-		Public function get_Grupo() {
-				return $this->_Grupo;
-		}
 		public function set_Calificacion_1($Calificacion_1) {
 			$this->_Calificacion_1 = $Calificacion_1;	
 		}
@@ -77,16 +62,15 @@
 			}
 
 
-			public function set_calificaciones(){
-				$this->sql = "INSERT INTO `calificaciones` (`jurados_cc_jurado`, `grupos_ubicacion_grupo`, `calificacion_1`, `calificacion_2`, `calificacion_3`, `calificacion_4`) VALUES ('".$this->_Jurado."', '".$this->_Grupo."', '".$this->_Calificacion_1."', '".$this->_Calificacion_2."', '".$this->_Calificacion_3."', '".$this->_Calificacion_4."');";
+			public function set_calificaciones($id_grupo,$id_jurado){
+				$this->sql = "INSERT INTO `calificaciones` (`jurados_cc_jurado`, `grupos_ubicacion_grupo`, `calificacion_1`, `calificacion_2`, `calificacion_3`, `calificacion_4`) VALUES ('".$id_jurado."', '".$id_grupo."', '".$this->_Calificacion_1."', '".$this->_Calificacion_2."', '".$this->_Calificacion_3."', '".$this->_Calificacion_4."');";
 				$this->get_grupo();
 				$this->set_query();
 			}
 			
-			public function get_grupo(){				
-				$this->sql = "UPDATE `grupos` SET `estado_grupo` = 'calificado' WHERE `grupos`.`id_grupo` = '".$this->_Grupo."'";
+			public function get_grupo($id_grupo){				
+				$this->sql = "UPDATE `grupos` SET `estado_grupo` = 'calificado' WHERE `grupos`.`id_grupo` = '".$id_grupo."'";
 				$this->set_query();
-				
 			}
 
 			public function get_infoParticipante($id_grupo){
