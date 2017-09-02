@@ -1,0 +1,51 @@
+.hol{
+	
+}
+@media only screen and (max-width: 644px) {
+
+  .p-nav{
+    display:none;
+
+  }
+
+}
+
+.img{
+	width: 100%; height: 100%;
+}
+
+
+.titulo{
+	border-bottom: solid rgba(0,0,0,.3);
+}
+
+.participantes{
+	background: #fff;
+}
+
+.datos{
+	background: #fff;
+	padding: 2%;
+	margin-bottom: 2%;
+}
+
+.calificacion{
+	background: #fff;
+	padding: 2%;
+	margin-bottom: 2%;
+}
+
+.exito{
+	background: #fff;
+	margin-top: 10%;
+	padding-bottom: 20px;
+}
+
+footer {
+  background-color: #242729;
+  
+  bottom: 0;
+  width: 100%;
+  padding: 2%;
+  color: white;
+}
