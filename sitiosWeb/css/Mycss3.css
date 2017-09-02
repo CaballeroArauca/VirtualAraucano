@@ -1,0 +1,18 @@
+body,html{
+     
+    background:url(../img/fondoC.png);
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+ 	
+}
+.participantes{
+	background: #fff;
+}
+.informacion{
+	background: #fff;
+}
+.despues{
+	background: #fff;
+}
