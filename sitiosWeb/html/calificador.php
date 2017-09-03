@@ -26,9 +26,6 @@
       obj=document.getElementById(div);
      obj.style.display = (ob.style.display=='none') ? 'block' : 'none';
      }
-
-     
-
   </script>
   <div class="container">
     <div class="jumbotron img-jumbotron" style="background: url(../img/jumbotron.png);">
