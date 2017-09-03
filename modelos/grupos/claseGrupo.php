@@ -59,5 +59,11 @@
 		Public function get_Estado() {
 				return $this->_Estado;
 		}
+
+		public function get_grupos(){
+			$this->_sql="SELECT `id_grupo`, `ubicacion_grupo`, `nombre_grupo`, `modalidad_grupo` FROM `grupos` WHERE `estado_grupo` IS NULL OR length(`estado_grupo`) = 0";
+			$row = $this->get_query();
+			return $row;
+		}
 	}
 ?>
