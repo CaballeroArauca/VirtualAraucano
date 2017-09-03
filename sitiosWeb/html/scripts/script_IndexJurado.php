@@ -7,30 +7,24 @@
         <h3><b><span class="glyphicon glyphicon-chevron-right" onclick="Activar('div1')"></span> Participantes</b></h3>
       </div>
       <div style="display:none;" id="div1" class="participantes">
-        <table class="table table-hover">
-          <tr>
-            <th><h4><b>Nombre</b></h4></th>
-            <th><h4><b>Modalidad</b></h4></th>
-          </tr>
-          <tr>
-            <td>
-              <h4><span class="glyphicon glyphicon-star-empty"></span> Ricardo Garcia Valaguera</h4>
-            </td>
-            <td><h4>Canto</h4></td>
-          </tr>
-          <tr>
-            <td>
-              <h4><span class="glyphicon glyphicon-star-empty"></span> Carlos Alverto Arevalo Aguillon</h4>
-            </td>
-            <td><h4>Declamación</h4></td>
-          </tr>
-          <tr>
-            <td>
-              <h4><span class="glyphicon glyphicon-star-empty"></span> Silvia Daniela Ariza Rincon</h4>
-            </td>
-            <td><h4>Canto</h4></td>
-          </tr>
-        </table>
+        <?php
+          require_once('../../modelos/calificacion/claseCalificacion.php');
+
+          $grupo = new Calificaciones();
+          $rowGrupos = $grupo->get_gruposCalificar();
+          echo "<table class='table table-hover'>";
+            echo "<tr>";
+              echo "<th><h4><b>Nombre</b></h4></th>";
+              echo "<th><h4><b>Modalidad</b></h4></th>";
+            echo "</tr>";
+            for ($i=0; $i < count($rowGrupos); $i++) { 
+              echo "<tr>";
+                echo "<td><h4><span class='glyphicon glyphicon-star-empty'></span> ".$rowGrupos[$i][2]."</h4></td>";
+                echo "<td><h4>".$rowGrupos[$i][3]."</h4></td>";
+              echo "</tr>";
+            }
+          echo "</table>";
+        ?>
       </div>
       </div>
     </div>
