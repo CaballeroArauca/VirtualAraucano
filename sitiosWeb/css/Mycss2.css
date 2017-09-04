@@ -18,10 +18,8 @@
 }
 
 .titulo2{
-	background: rgba(53, 153, 191,0.3);
-	width: 100%;
-  padding: 1%;
-	
+	background: #263238;
+	color: #fff;
 }
 .participantes{
 	background: #fff;
@@ -52,4 +50,9 @@ footer {
   width: 100%;
   padding: 2%;
   color: white;
+}
+
+.menu{
+	background: #607d8b;
+	padding: 0% 10% 0% 10%;
 }

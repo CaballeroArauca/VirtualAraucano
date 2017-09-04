@@ -50,5 +50,11 @@
 		Public function get_Semestre() {
 				return $this->_Semestre;
 		}
+
+		public function get_Participantes($idGrupo){
+			$this->_sql="";
+			$row = $this->get_query();
+			return $row;
+		}
 	}
 ?>

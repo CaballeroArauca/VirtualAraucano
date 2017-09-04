@@ -61,7 +61,13 @@
 		}
 
 		public function get_grupos(){
-			$this->_sql="SELECT `id_grupo`, `ubicacion_grupo`, `nombre_grupo`, `modalidad_grupo` FROM `grupos` WHERE `estado_grupo` IS NULL OR length(`estado_grupo`) = 0";
+			$this->_sql="";
+			$row = $this->get_query();
+			return $row;
+		}
+
+		public function get_grupo(){
+			$this->_sql="";
 			$row = $this->get_query();
 			return $row;
 		}

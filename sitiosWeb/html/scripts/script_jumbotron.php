@@ -12,7 +12,7 @@
    obj.style.display = (ob.style.display=='none') ? 'block' : 'none';
    }
 </script>
-<div class="container">
+<div class="container-fluid menu">
   <div class="jumbotron img-jumbotron" style="background: url(../img/jumbotron.png);">
     <h1 align="center">Noche de talento </h1>      
     <p>informacion de la noche de talentos</p>
@@ -20,7 +20,7 @@
       <div class="row">
           <div class="col-xs-3">
             <div><a onclick="Activar('div1')" href="#a1"> <img  class="img" align="center" src="../img/nav2.png"> </a></div>
-            <p class="p-nav" align="center">Participantes</p>
+            <p class="p-nav" align="center">Grupos</p>
           </div>
           <div class="col-xs-3">
               <div><a onclick="Activar('div2')" href="#a2"> <img  class="img" src="../img/nav1.png"> </a></div>
@@ -48,7 +48,7 @@
   <div class="row">
     <div class="col-sm-12 titulo2">
       <div class="col-sm-6 col-sm-offset-1">
-          <h3><b><span class="glyphicon glyphicon-user"></span> <?php echo $usuario?></b></h3>
+          <h3><b><img src="../img/usuario.png"> <?php echo $usuario?></b></h3>
       </div>
     </div>   
   </div>
