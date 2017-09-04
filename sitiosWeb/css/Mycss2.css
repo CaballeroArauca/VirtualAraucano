@@ -1,6 +1,4 @@
-.hol{
-	
-}
+
 @media only screen and (max-width: 644px) {
 
   .p-nav{
@@ -19,6 +17,10 @@
 	border-bottom: solid rgba(0,0,0,.3);
 }
 
+.titulo2{
+	background: #263238;
+	color: #fff;
+}
 .participantes{
 	background: #fff;
 }
@@ -48,4 +50,9 @@ footer {
   width: 100%;
   padding: 2%;
   color: white;
+}
+
+.menu{
+	background: #607d8b;
+	padding: 0% 10% 0% 10%;
 }
