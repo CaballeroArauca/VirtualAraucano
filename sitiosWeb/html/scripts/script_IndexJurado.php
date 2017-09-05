@@ -13,18 +13,21 @@
 
           $grupo = new Grupo();
           $rowGrupos = $grupo->get_grupos();
-          echo "<table class='table table-hover'>";
-            echo "<tr>";
-              echo "<th><h4><b>Nombre</b></h4></th>";
-              echo "<th><h4><b>Modalidad</b></h4></th>";
-            echo "</tr>";
-            for ($i=0; $i < count($rowGrupos); $i++) { 
+          if ($rowGrupos == "vacio") {
+             header("Location: ../../sitiosWeb/html/fin.php");
+          }else{
+            echo "<table class='table table-hover'>";
               echo "<tr>";
-                echo "<td><h4><span class='glyphicon glyphicon-star-empty'></span> ".$rowGrupos[$i][2]."</h4></td>";
-                echo "<td><h4>".$rowGrupos[$i][3]."</h4></td>";
+                echo "<th><h4><b>Nombre</b></h4></th>";
+                echo "<th><h4><b>Modalidad</b></h4></th>";
               echo "</tr>";
-            }
-          echo "</table>";
+              for ($i=0; $i < count($rowGrupos); $i++) { 
+                echo "<tr>";
+                  echo "<td><h4><span class='glyphicon glyphicon-star-empty'></span> ".$rowGrupos[$i][1]."</h4></td>";
+                  echo "<td><h4>".$rowGrupos[$i][2]."</h4></td>";
+                echo "</tr>";
+              }
+          }  echo "</table>";
         ?>
       </div>
       </div>
@@ -40,12 +43,11 @@
           <div class="col-sm-4">
             <h4><b>Nombre</b></h4>
             <?php
-               $rowGrupo = $grupo->get_grupo();
-               $idGrupo = $rowGrupo[0][0];
+               $idGrupo = $rowGrupos[0][0];
             ?>
-            <h4><b>-</b><?php echo $rowGrupo[0][1];?></h4>
+            <h4><b>-</b><?php echo $rowGrupos[0][1];?></h4>
             <h4><b>Modalidad</h4>
-            <h4><b>-</b><?php echo $rowGrupo[0][2];?></h4>
+            <h4><b>-</b><?php echo $rowGrupos[0][2];?></h4>
           </div>
           <div class="col-sm-4">
             <h4><b>Participantes</b></h4>
