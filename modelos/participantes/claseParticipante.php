@@ -52,7 +52,7 @@
 		}
 
 		public function get_Participantes($idGrupo){
-			$this->_sql="";
+			$this->_sql="SELECT `cc_participante`,`nombres_participante`,`apellidos_participante`,`programa_participante`,`semestre_participante` FROM `participantes` WHERE `grupos_id_grupo` = '".$id_grupo."'";
 			$row = $this->get_query();
 			return $row;
 		}
