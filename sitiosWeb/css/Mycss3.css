@@ -16,3 +16,24 @@ body,html{
 .despues{
 	background: #fff;
 }
+.mover{
+	animation: hola .8s linear;
+}
+@keyfarmes hola{
+	0%{
+		transform: translateY(400px);
+		animation-timing-function: ease-out;
+	}
+	60%{
+		transform: translateY(-50px);
+		animation-timing-function: ease-in;
+	}
+	80%{
+		transform: translateY(400px);
+		animation-timing-function: ease-out;
+	}
+100%{
+		transform: translateY(0px);
+		animation-timing-function: ease-in;
+	}
+}
