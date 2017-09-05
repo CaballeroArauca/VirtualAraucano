@@ -60,8 +60,8 @@
 				return $this->_Estado;
 		}
 
-		public function get_grupos($idGrupo){
-			$this->_sql="SELECT `id_grupo`,`nombre_grupo` FROM `grupos` WHERE `id_grupo` NOT IN (SELECT `grupos_id_grupo` FROM `calificaciones` WHERE `grupos_id_grupo` = '".$idGrupo."') ORDER BY `ubicacion_grupo`";
+		public function get_grupos($idJurado){
+			$this->_sql="SELECT `id_grupo`,`nombre_grupo`, `modalidad_grupo` FROM `grupos` WHERE `id_grupo` NOT IN (SELECT `grupos_id_grupo` FROM `calificaciones` WHERE `jurados_cc_jurado` = '".$idJurado."') ORDER BY `ubicacion_grupo`";
 			$row = $this->get_query();
 			return $row;
 		}

@@ -18,4 +18,4 @@
 	$calificaciones->set_Calificacion_3($_Calificacion_3);
 	$calificaciones->set_Calificacion_4($_Calificacion_4);
 	$calificaciones->set_calificaciones($idJurado, $idGrupo);
-	header("Location: ../../sitiosWeb/html/calificacionExito.php);
+	//header("Location: ../../sitiosWeb/html/calificacionExito.php);
