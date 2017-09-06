@@ -9,8 +9,8 @@
           require_once('../../modelos/grupos/claseGrupo.php');
           require_once('../../modelos/participantes/claseParticipante.php');
 
-          $grupo = new Grupo();
-          $rowGrupos = $grupo->get_grupos($idJurado);
+          $grupo = new Participante();
+          $rowGrupos = $grupo->get_participantes($idJurado);
           if ($rowGrupos == "vacio") {
              header("Location: ../../sitiosWeb/html/fin.php");
           }else{
