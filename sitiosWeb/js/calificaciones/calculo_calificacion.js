@@ -1,29 +1,30 @@
-function Calcular(){	
-	var Expresion, Escenario, calificacion_4;
-	calificacion_1 = (document.getElementById("calificacion_1").value);
-	calificacion_2 = (document.getElementById("calificacion_2").value);
-	calificacion_3 = (document.getElementById("calificacion_3").value);
-	calificacion_4 = (document.getElementById("calificacion_4").value);
-	if ($.trim(calificacion_1).length > 0) {
-		calificacion_1 = parseInt(calificacion_1) * 0.25;
+function Calcular(){
+	var Calificacion_1, Calificacion_2, Calificacion_3, Calificacion_4;
+	Calificacion_1 = (document.getElementById("Calificacion_1").value);
+	
+	Calificacion_2 = (document.getElementById("Calificacion_2").value);
+	Calificacion_3 = (document.getElementById("Calificacion_3").value);
+	Calificacion_4 = (document.getElementById("Calificacion_4").value);
+	if ($.trim(Calificacion_1).length > 0) {
+		Calificacion_1 = parseInt(Calificacion_1) * 0.25;
 	}else{
-		calificacion_1 = 0;
+		Calificacion_1 = 0;
 	}
-	if ($.trim(calificacion_2).length > 0) {
-		calificacion_2 = parseInt(calificacion_2) * 0.25;
+	if ($.trim(Calificacion_2).length > 0) {
+		Calificacion_2 = parseInt(Calificacion_2) * 0.25;
 	}else{
-		calificacion_2 = 0;
+		Calificacion_2 = 0;
 	}
-	if ($.trim(calificacion_3).length > 0) {
-		calificacion_3 = parseInt(calificacion_3) * 0.25;
+	if ($.trim(Calificacion_3).length > 0) {
+		Calificacion_3 = parseInt(Calificacion_3) * 0.25;
 	}else{
-		calificacion_3 = 0;
+		Calificacion_3 = 0;
 	}
-	if ($.trim(calificacion_4).length > 0) {
-		calificacion_4 = parseInt(calificacion_4) * 0.25;
+	if ($.trim(Calificacion_4).length > 0) {
+		Calificacion_4 = parseInt(Calificacion_4) * 0.25;
 	}else{
-		calificacion_4 = 0;
+		Calificacion_4 = 0;
 	}
-	puntaje = calificacion_1 + calificacion_2 + calificacion_3 + calificacion_4;
+	puntaje = Calificacion_1 + Calificacion_2 + Calificacion_3 + Calificacion_4;
 	document.getElementById("total").innerHTML= puntaje.toFixed(1);
 }

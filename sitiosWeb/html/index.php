@@ -15,8 +15,8 @@
   	</head>
 
 	<?php
-    	include 'scripts/script_jumbotron.php';
-    ?>
+		include 'scripts/script_navegador.php';
+	?>
 
 	<body>
 		<div class="container">
@@ -31,6 +31,8 @@
 		        ?>				
 			</div>
 	  	</div>
-	  	
+	<script src="../bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/calificaciones/calculo_calificacion.js"></script>
   	</body>
 </html>
