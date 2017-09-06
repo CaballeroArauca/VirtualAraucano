@@ -51,8 +51,8 @@
 				return $this->_Semestre;
 		}
 
-		public function get_Participantes($idGrupo){
-			$this->_sql="SELECT `nombres_participante`, `apellidos_participante` FROM `participantes` WHERE `grupos_id_grupo` = ".$idGrupo."";
+		public function get_Participantes($idJurado){
+			$this->_sql="SELECT * FROM participantes WHERE id_participante NOT IN (SELECT participantes_id_participante FROM calificaciones WHERE jurados_cc_jurado = ".$idJurado.") GROUP BY turno_grupo ";
 			$row = $this->get_query();
 			return $row;
 		}
