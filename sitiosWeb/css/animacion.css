@@ -5,6 +5,7 @@
 	
 	overflow:hidden;
 }
+
 .img-nuve {
     width: 166px;
     height: 121px;
@@ -22,11 +23,11 @@
     background: url('../img/estrella.png');
     position: absolute;
     
-    animation: abajo 4s ;
+    animation: abajo 4s infinite ;
 }
 
 @keyframes abajo {
-    0%   {left:-190px; top: 300px;
+    0%   {left:-190px; top: 100px;
     	display: block;
     	}
    
@@ -34,7 +35,7 @@
 
     100% {
     	transform: translateY(200%);
-    	left:100%; top:300px;
+    	left:100%; top:100px;
     	transform: rotate(360deg);
     	display:none;
 
@@ -42,13 +43,15 @@
 }
 @keyframes example {
     0%   {left:-199px; 
+        top:400px;
     }
    
    
 
     100% {
-    	transform: translateY(200%);
-    	left:100%; top:0px;
+    	transform: translateY(100%);
+    	left:100%; 
+        top:400px;
 
     }
 }
@@ -64,3 +67,72 @@
 }
 
 }
+
+@keyframes fron-m{
+    0%{
+
+        transform: translateY(150%);
+    }
+    30%{
+        transform: translateY(-10%);
+    }
+    60%{
+        transform: translateY(-5%);
+    }
+    70%{
+        transform: translateY(-10%);
+    }
+    70%{
+        transform: translateY(-5%);
+    }
+
+    100%{
+        transform: translateY(0%);
+     }   
+    }
+@keyframes fron-s{
+    0%{
+
+        transform: translateX(142%);
+    }
+
+    100%{
+        transform: translateX(0);
+     }   
+    }
+@keyframes img-e{
+    0%{
+
+    transform: translateY(-500%);
+    }
+    
+
+    100%{
+        transform: translateY(0%);
+     }   
+    }
+
+@keyframes fron-w{
+    0%{
+
+        transform: translateY(10%);
+    }
+    30%{
+        transform: translateY(5%);
+    }
+    60%{
+        transform: translateY(10%);
+    }
+    70%{
+        transform: translateY(5%);
+    }
+    70%{
+        transform: translateY(10%);
+    }
+     70%{
+        transform: translateY(9%);
+    }
+    100%{
+        transform: translateY(10%);
+     }   
+    }

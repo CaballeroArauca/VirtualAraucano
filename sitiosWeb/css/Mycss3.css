@@ -7,33 +7,37 @@ body,html{
 	background-size: cover;
  	
 }
+
+
+.espacio{
+	padding: 15%;
+   animation:  fron-w 10s infinite ;
+	transform: translateY(10%);
+	
+}
 .participantes{
 	background: #fff;
+	border: 2px ;
+    border-radius: 10px;
+
+
 }
 .informacion{
 	background: #fff;
+	border: 2px ;
+    border-radius: 10px;
+	animation:  fron-m 10s ;
 }
 .despues{
 	background: #fff;
+	animation:  fron-s 3s ;
+	border: 2px ;
+    border-radius: 10px;
 }
-.mover{
-	animation: hola .8s linear;
+
+.img-infor{
+	animation:  img-e 3s;
 }
-@keyfarmes hola{
-	0%{
-		transform: translateY(400px);
-		animation-timing-function: ease-out;
-	}
-	60%{
-		transform: translateY(-50px);
-		animation-timing-function: ease-in;
-	}
-	80%{
-		transform: translateY(400px);
-		animation-timing-function: ease-out;
-	}
-100%{
-		transform: translateY(0px);
-		animation-timing-function: ease-in;
-	}
+.img-despues{
+	animation: img-p 5s;
 }
