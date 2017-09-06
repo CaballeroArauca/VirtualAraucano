@@ -6,12 +6,11 @@
       </div>
       <div class="participantes">
         <?php
-          require_once('../../modelos/grupos/claseGrupo.php');
           require_once('../../modelos/participantes/claseParticipante.php');
 
-          $grupo = new Participante();
-          $rowGrupos = $grupo->get_participantes($idJurado);
-          if ($rowGrupos == "vacio") {
+          $participantes = new Participante();
+          $rowParticipantes = $participantes->get_participantes($idJurado);
+          if ($rowParticipantes == "vacio") {
              header("Location: ../../sitiosWeb/html/fin.php");
           }else{
             echo "<table class='table table-hover'>";
@@ -19,10 +18,10 @@
                 echo "<th><h4><b>Nombre</b></h4></th>";
                 echo "<th><h4><b>Modalidad</b></h4></th>";
               echo "</tr>";
-              for ($i=0; $i < count($rowGrupos); $i++) { 
+              for ($i=0; $i < count($rowParticipantes); $i++) { 
                 echo "<tr>";
-                  echo "<td><h4><span class='glyphicon glyphicon-star-empty'></span> ".$rowGrupos[$i][1]."</h4></td>";
-                  echo "<td><h4>".$rowGrupos[$i][2]."</h4></td>";
+                  echo "<td><h4><span class='glyphicon glyphicon-star-empty'></span> ".$rowParticipantes[$i][1]."</h4></td>";
+                  echo "<td><h4>".$rowParticipantes[$i][7]."</h4></td>";
                 echo "</tr>";
               }
           }  echo "</table>";
@@ -31,30 +30,28 @@
     </div>
     <div class="col-sm-8">
       <div class="titulo">
-        <h3><b><span class="glyphicon glyphicon-chevron-right"></span> Datos del Grupo participante</b></h3>
+        <h3><b><span class="glyphicon glyphicon-chevron-right"></span> Datos del participante</b></h3>
       </div>
       <div class="datos">
         <div class="row">
-          <div class="col-sm-4">
-            <h4><b>Nombre</b></h4>
+          <div class="col-sm-6">
+            <h4><b>Participante</b></h4>
             <?php
-               $idGrupo = $rowGrupos[0][0];
-            ?>
-            <h4><b>-</b><?php echo $rowGrupos[0][1];?></h4>
-            <h4><b>Modalidad</h4>
-            <h4><b>-</b><?php echo $rowGrupos[0][2];?></h4>
-          </div>
-          <div class="col-sm-4">
-            <h4><b>Participantes</b></h4>
-            <?php
-              $participantes = new Participante();
-              $rowParticipantes = $participantes->get_Participantes($idGrupo);
-              for ($i=0; $i < count($rowParticipantes); $i++) { 
-                echo "<h4><b>-</b>".$rowParticipantes[$i][0]." ".$rowParticipantes[$i][1]."</h4>";
-              }
+               $turno = $rowParticipantes[0][6];
+               $participanteActual = new Participante();
+               $rowParticipante = $participanteActual->get_TurnoActual($turno);
+               for ($i=0; $i < count($rowParticipante); $i++) { 
+                 echo "<h4><b>-</b> ".$rowParticipante[$i][1]." ".$rowParticipante[$i][2]."</h4>";
+               }
             ?>
           </div>
           <div class="col-sm-4">
+            <h4><b>Tema</b></h4>
+            <h4><b>-</b> <?php echo $rowParticipante[0][8] ?></h4>
+            <h4><b>Genero</b></h4>
+            <h4><b>-</b> <?php echo $rowParticipante[0][9] ?></h4>
+          </div>
+          <div class="col-sm-2">
             <center>
               <h4><b>Puntos</b></h4>
               <div class="puntos">
@@ -75,7 +72,7 @@
               <div class="form-group">
                 <label class="col-sm-4 control-label" style="text-align: left">Expresión Corporal</label>
                 <div class="col-sm-2">
-                  <input type="hidden" name="idGrupo" value="<?php echo $idGrupo;?>">
+                  <input type="hidden" name="turno" value="<?php echo $turno;?>">
                   <input class="form-control" type="number" name="Calificacion_1" id="Calificacion_1" onKeyUp="Calcular()" min="1" max="100" placeholder="25%" required>
                 </div>
               </div>

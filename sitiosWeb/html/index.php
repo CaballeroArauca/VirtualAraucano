@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-	    <meta charset="utf-8">
+	   	<meta charset="utf-8">
 	    <title>Calificacion</title>
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +26,9 @@
 		    		switch ($rol) {
 		    			case 'Jurado':
 		    				include 'scripts/script_IndexJurado.php';
+		    			break;
+		    			case 'admin':
+		    				include 'scripts/script_IndexAdmin.php';
 		    			break;
 		    		}
 		        ?>				

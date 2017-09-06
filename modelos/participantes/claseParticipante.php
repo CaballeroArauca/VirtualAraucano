@@ -52,9 +52,51 @@
 		}
 
 		public function get_Participantes($idJurado){
-			$this->_sql="SELECT * FROM participantes WHERE id_participante NOT IN (SELECT participantes_id_participante FROM calificaciones WHERE jurados_cc_jurado = ".$idJurado.") GROUP BY turno_grupo ";
+			$this->_sql="SELECT * FROM participantes WHERE id_participante NOT IN (SELECT participantes_id_participante FROM calificaciones WHERE jurados_cc_jurado = ".$idJurado.") GROUP BY turno_grupo LIMIT 5";
 			$row = $this->get_query();
 			return $row;
 		}
+
+		public function get_TurnoActual($turno){
+			$this->_sql="SELECT * FROM `participantes` WHERE `turno_grupo` = ".$turno."";
+			$row = $this->get_query();
+			return $row;
+		}
+
+		public function get_idsParticipantes($turno){
+			$this->_sql = "SELECT `id_participante` FROM `participantes` WHERE `turno_grupo` = ".$turno."";
+			$row = $this->get_query();
+			return $row;
+		}
+
+		public function participante_actual(){
+			$participantes = $this->cantida_Participantes();
+			$Jurados = $this->cantida_Jurados();
+			for ($i=0; $i < count($participantes); $i++) { 
+				$this->_sql = "SELECT `participantes_id_participante` FROM `calificaciones` WHERE `participantes_id_participante` = ".$participantes[$i][0]."";
+				$row = $this->get_query();
+				if ($row != "vacio") {
+					if (count($row) != count($Jurados)) {
+						var_dump($row);
+						$this->_sql = "SELECT `turno_grupo` FROM `participantes` WHERE `id_participante` = ".$row[0][0]."";
+						$turno = $this->get_query();
+						exit($turno[0][0]);
+					}	
+				}
+			}
+		}
+
+		private function cantida_Participantes() {
+			$this->_sql = "SELECT `turno_grupo` FROM `participantes` GROUP BY `turno_grupo`";
+			$row = $this->get_query();
+			return $row;
+		}
+
+		private function cantida_Jurados(){
+			$this->_sql = "SELECT * FROM `usuarios` WHERE `rol_usuario` = 'Jurado'";
+			$row = $this->get_query();
+			return $row;
+		}
+
 	}
 ?>
