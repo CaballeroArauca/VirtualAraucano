@@ -77,13 +77,27 @@
 				$row = $this->get_query();
 				if ($row != "vacio") {
 					if (count($row) != count($Jurados)) {
-						var_dump($row);
 						$this->_sql = "SELECT `turno_grupo` FROM `participantes` WHERE `id_participante` = ".$row[0][0]."";
 						$turno = $this->get_query();
-						exit($turno[0][0]);
+						return $turno[0][0];
+						exit();
 					}	
+				}else{
+					return $participantes[$i][0];
 				}
 			}
+		}
+
+		public function get_Lista($turnoActual) {
+			$this->_sql = "SELECT `nombres_participante`, `apellidos_participante` FROM `participantes` WHERE `turno_grupo` >= ".$turnoActual." GROUP BY turno_grupo LIMIT 3";
+			$row = $this->get_query();
+			return $row;
+		}
+
+		public function get_TurnoAnterior($turno){
+			$this->_sql = "SELECT `nombres_participante`, `calificacion_1`, `calificacion_2`, `calificacion_3`, `calificacion_4` FROM `calificaciones`, (SELECT `id_participante`, `nombres_participante` FROM `participantes` WHERE `turno_grupo` = ".$turno." )AS tab WHERE `participantes_id_participante` = tab.`id_participante` ";
+			$row = $this->get_query();
+			return $row;
 		}
 
 		private function cantida_Participantes() {
@@ -97,6 +111,5 @@
 			$row = $this->get_query();
 			return $row;
 		}
-
 	}
 ?>
