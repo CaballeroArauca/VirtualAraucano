@@ -23,6 +23,12 @@
 			echo "</table>";
 		break;
 
+		case 'get_Img':
+			$Img = new Participante();
+			$turnoActual = $Img->participante_actual();
+			echo "<img class='img-responsive' src='../img/participantes/".$turnoActual.".PNG'>";
+		break;
+
 		case 'get_Anterior':
 			$anterior = new Participante();
 			$turnoActual = $anterior->participante_actual();
