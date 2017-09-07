@@ -72,7 +72,7 @@
 		public function participante_actual(){
 			$participantes = $this->cantida_Participantes();
 			$Jurados = $this->cantida_Jurados();
-			for ($i=0; $i < count($participantes); $i++) { 
+			for ($i=0; $i < count($participantes); $i++) {
 				$this->_sql = "SELECT `participantes_id_participante` FROM `calificaciones` WHERE `participantes_id_participante` = ".$participantes[$i][0]."";
 				$row = $this->get_query();
 				if ($row != "vacio") {
@@ -83,7 +83,10 @@
 						exit();
 					}	
 				}else{
-					return $participantes[$i][0];
+					$this->_sql = "SELECT `turno_grupo` FROM `participantes` WHERE `id_participante` = ".$participantes[$i][0]."";
+					$turno = $this->get_query();
+					return $turno[0][0];
+					exit();
 				}
 			}
 		}
@@ -95,13 +98,13 @@
 		}
 
 		public function get_TurnoAnterior($turno){
-			$this->_sql = "SELECT `nombres_participante`, `calificacion_1`, `calificacion_2`, `calificacion_3`, `calificacion_4` FROM `calificaciones`, (SELECT `id_participante`, `nombres_participante` FROM `participantes` WHERE `turno_grupo` = ".$turno." )AS tab WHERE `participantes_id_participante` = tab.`id_participante` ";
+			$this->_sql = "SELECT `nombres_participante`, `calificacion_1`, `calificacion_2`, `calificacion_3`, `calificacion_4` FROM `calificaciones`, (SELECT `id_participante`, `nombres_participante` FROM `participantes` WHERE `turno_grupo` = ".$turno." )AS tab WHERE `participantes_id_participante` = tab.`id_participante`";
 			$row = $this->get_query();
 			return $row;
 		}
 
 		private function cantida_Participantes() {
-			$this->_sql = "SELECT `turno_grupo` FROM `participantes` GROUP BY `turno_grupo`";
+			$this->_sql = "SELECT `id_participante` FROM `participantes`";
 			$row = $this->get_query();
 			return $row;
 		}

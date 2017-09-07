@@ -22,5 +22,7 @@
 
 
 	$rowIds = $participantes->get_idsParticipantes($turno);
-	$idParticipante = $rowIds[0][0];
-	$calificaciones->set_calificaciones($idJurado, $idParticipante);
+	for ($i=0; $i < count($rowIds); $i++) { 
+		$idParticipante = $rowIds[$i][0];
+		$calificaciones->set_calificaciones($idJurado, $idParticipante);	
+	} 
