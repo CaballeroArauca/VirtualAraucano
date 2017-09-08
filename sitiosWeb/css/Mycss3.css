@@ -1,3 +1,8 @@
+@font-face{
+	font-family: Millionaire_DEMO;
+	src:url('../font/Millionaire_DEMO.ttf');
+}
+
 body,html{
      
     background:url(../img/fondoC.png);
@@ -6,6 +11,9 @@ body,html{
 	background-attachment: fixed;
 	background-size: cover;
  	
+}
+h4{
+	font-family: Millionaire_DEMO;
 }
 
 .ganadores{
