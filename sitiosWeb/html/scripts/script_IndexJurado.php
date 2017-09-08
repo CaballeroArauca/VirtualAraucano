@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="titulo">
-        <h3><b><span class="glyphicon glyphicon-chevron-right"></span> Formulario de Calificacion</b></h3>
+        <h3><b><span class="glyphicon glyphicon-chevron-right"></span> Formulario de Calificación</b></h3>
       </div>
       <div class="calificacion">
         <div class="row">
@@ -92,7 +92,7 @@
               </div>
               
               <div class="form-group">
-                <label class="col-sm-4 control-label" style="text-align: left">Afinación</label>
+                <label class="col-sm-4 control-label" style="text-align: left">Medida</label>
                  <div class="col-sm-2">          
                   <input class="form-control" type="number" name="Calificacion_4" id="Calificacion_4" onKeyUp="Calcular()" min="1" max="100" placeholder="25%" required>
                 </div>
