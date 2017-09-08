@@ -1,6 +1,6 @@
 @font-face{
-	font-family: Millionaire_DEMO;
-	src:url('../font/Millionaire_DEMO.ttf');
+	font-family: texto;
+	src:url('../font/RifficFree-Bold.ttf');
 }
 
 body,html{
@@ -13,10 +13,10 @@ body,html{
  	
 }
 h1{
-	font-family: Millionaire_DEMO;
+	font-family: texto;
 }
 h3{
-	font-family: Millionaire_DEMO;
+	font-family: texto;
 }
 
 .ganadores{
