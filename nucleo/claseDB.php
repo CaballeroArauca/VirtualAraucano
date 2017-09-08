@@ -5,7 +5,7 @@
         //Variables con los datos de la base de datos
         private static $db_host = 'localhost';
         private static $db_user = 'root';
-        private static $db_pass = 'suadmin';
+        private static $db_pass = '';
         private static $db_name = 'calificaciones';
 
         //https://www.youtube.com/watch?v=Wu79mONDsJc
@@ -13,6 +13,7 @@
         //Variables Globales
         private $_conexion;
         protected $_sql;
+        
 
         //Funcion para conectarse a la base de datos
         private function abrir_conexion() {
@@ -59,5 +60,7 @@
             }
             $this->cerrar_conexion();
         }
+
+        
     }
 ?>

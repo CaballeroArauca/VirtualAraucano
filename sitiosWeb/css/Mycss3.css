@@ -26,7 +26,7 @@ body,html{
 	background: #fff;
 	border: 2px ;
     border-radius: 10px;
-	animation:  fron-m 10s ;
+	
 }
 .despues{
 	background: #fff;
@@ -36,8 +36,8 @@ body,html{
 }
 
 .img-infor{
-	animation:  img-e 3s;
+	
 }
 .img-despues{
-	animation: img-p 5s;
+
 }
