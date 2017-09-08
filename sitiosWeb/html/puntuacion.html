@@ -1,95 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>puntuacion</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <head>
+  	<meta charset="utf-8">
+  	<title>puntuacion</title>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/Mycss3.css">
     <link rel="stylesheet" type="text/css" href="../css/animacion.css">
-    
-</head>
-<body>
-  <div class="conte">
-      <div class="img-nuve"></div>
-      
-    
-    <div class="img-nuve2">
-      
-    </div>
- 
-	<div class="container">
+  </head>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  
-    <div class="row grid-divider ">
-    <div class="col-sm-3 mover">
-      <div class="col-padding">
-       <br>
-          <p align="center"><img  src="../img/grupos.png"></p>
-          <div class="participantes" id="lista">
-            
-          </div>
-      </div>
-    </div>
-    <div class="cont-info">
-    <div class="col-sm-6">
-      <div class="col-padding">
-        <p align="center"><img  src="../img/informacion.png" class="img-infor"></p>
-        <br>
-      	<div class="informacion">
-      	   <br>
-          <div  id="div2" class="datos" align="center">
-            <div class="row">
-              <div class="col-sm-4">
-                <h4><b>Nombre</b></h4>
-                <h4><b>-</b> Ricardo Garcia Valaguera</h4>
-                <h4><b>Modalidad</b></h4>
-                <h4><b>-</b> Canto</h4>
-              </div>
-              <div class="col-sm-4">
-                <h4><b>Participantes</b></h4>
-                <h4><b>-</b> Ricardo Garcia Valaguera</h4>
-              </div>
-              <div class="col-sm-4">
-                <center>
-                  <h4><b>Puntos</b></h4>
-                  <div class="puntos">
-                    <h1><b id="total">0</b></h1>
-                  </div>
-                </center>
-              </div>
+  <body>
+    <div class="conte">
+      <div class="img-nuve"></div>  
+      <div class="img-nuve2"></div>
+  	  <div class="container-fluid">
+        <div class="row grid-divider">
+          <div class="col-sm-3 mover">
+            <div class="col-padding">
+              <p align="center"><img  src="../img/grupos.png"></p>
+              <div class="participantes" id="lista"></div>
             </div>
           </div>
-          <br>
+
+          <div class="col-sm-7                                                  ">
+            <div class="col-padding">
+              <p align="center"><img  src="../img/informacion.png" class="img-infor"></p>
+              <div class="row informacion" id="img"></div>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="col-padding">
+              <p align="center"><img  src="../img/anterior.png" class="img-despues"></p>
+              <div class="despues" align="center" id="anterior"></div>
+            </div>
+          </div>
         </div>
-      </div>
+      </div> 
     </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="col-padding">
-        <p align="center"><img  src="../img/anterior.png" class="img-despues"></p>
-        <div class="despues" align="center" id="anterior"></div>
-      </div>
-    </div>
-
-    </div>
-     </div> 
- </div>
- <script src="../bootstrap/js/jquery-3.1.1.min.js"></script>
-  <script src="../bootstrap/js/bootstrap.js"></script>
-<script src="../js/calificaciones/puntuacion.js"></script>
-</body>
+    <script src="../bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/calificaciones/puntuacion.js"></script>
+  </body>
 </html>
