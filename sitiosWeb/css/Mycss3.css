@@ -12,7 +12,10 @@ body,html{
 	background-size: cover;
  	
 }
-h4{
+h1{
+	font-family: Millionaire_DEMO;
+}
+h3{
 	font-family: Millionaire_DEMO;
 }
 
