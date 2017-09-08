@@ -1,0 +1,12 @@
+body,html{
+     
+    background:url(../img/gracias.png);
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+ 	
+}
+.boton{
+	transform: translate(-10%,1100%);
+}
