@@ -20,7 +20,7 @@
         $resultado = new Resultados();
           $rowcanto = $resultado->get_ResulCanto();
           $rowdeclama = $resultado->get_ResulDeclama();
-         
+
           if ($rowcanto == "vacio") {
             echo "Todavia no se han calificado participantes ";
           }else{
@@ -40,7 +40,7 @@
                     echo "</td>";
 
                     echo "<td>";
-                      echo "<h4><span class='glyphicon glyphicon-star-empty'></span> ".$rowcanto[$i][1]."</h4>";
+                      echo "<h4>".$rowcanto[$i][1]."</h4>";
                     echo "</td>";   
 
                      echo "<td><h4 name='puntaje'>".$rowcanto[$i][2]." </h4> </td>";
@@ -73,13 +73,13 @@
                 for ($x=0; $x <2 ; $x++) { 
                   echo "<tr>";
                     echo "<td>";
-                       echo "<h4><span class='glyphicon glyphicon-star-empty'></span> ".$rowdeclama[$x][0]."</h4>";
+                       echo "<h1><span class='glyphicon glyphicon-star-empty'></span> ".$rowdeclama[$x][0]."</h1>";
                     echo "</td>";
                     echo "<td>";
-                       echo "<h4><span class='glyphicon glyphicon-star-empty'></span> ".$rowdeclama[$x][1]."</h4>";
+                       echo "<h1>".$rowdeclama[$x][1]."</h1>";
                     echo "</td>";
                   
-                    echo "<td><h4 name='puntaje'>".$rowdeclama[$x][2]."</h4> </td>";
+                    echo "<td><h1 name='puntaje'>".$rowdeclama[$x][2]."</h1> </td>";
                   echo "</tr>";
                 }
                 
