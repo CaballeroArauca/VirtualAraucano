@@ -20,7 +20,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<center>
-						<div>
+						<div class="fin">
 							<h3>Su calificación se realizó exitosamente</h3>
 						</div>
 						<div>

@@ -1,0 +1,48 @@
+body,html{
+ 
+    background:url(../img/exitoza.png);
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+ 	
+}
+
+.boton {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #56BFC5;
+  border: none;
+  border-radius: 15px;
+ box-shadow: 0 9px #198F94;
+ transform: translate(-150%,350%);
+}
+
+.boton:hover {
+	background-color: #96CA4D;
+	  border-radius: 15px;
+	box-shadow: 0 9px #198F94;
+	color: white;
+	transform: translate(-150%,350%);	
+}
+
+.boton:active {
+  background-color: #96CA4D;
+  box-shadow: 0 5px #A2D7BF;
+  transform: translate(-150%,350%);
+}
+
+.fin{
+	width: 30%;
+    height: 60%;
+	background:rgba(158, 157, 157,2);
+	border-radius: 15px;
+	color: white;
+	transform: translate(-100%,350%);
+}

@@ -43,7 +43,7 @@
 		public function set_calificaciones($idJurado, $idParticipante) {
 			$this->_sql = "INSERT INTO `calificaciones` (`jurados_cc_jurado`, `participantes_id_participante`, `calificacion_1`, `calificacion_2`, `calificacion_3`, `calificacion_4`) VALUES ('".$idJurado."', '".$idParticipante."', '".$this->_Calificacion_1."', '".$this->_Calificacion_2."', '".$this->_Calificacion_3."', '".$this->_Calificacion_4."')";
 			$this->set_query();
-			header("Location: ../../sitiosWeb/html/calificacionExito.php");
+			header("Location: ../../sitiosWeb/html/calificacionExito.html");
 		}
 	}
 				

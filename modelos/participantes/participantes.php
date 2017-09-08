@@ -36,7 +36,7 @@
 			if ($turnoAnterior > 0) {
 				$total = 0;
 				$rowAnterior = $anterior->get_TurnoAnterior($turnoAnterior);
-				for ($i=0; $i < count($rowAnterior); $i++) { 
+				for ($i=0; $i < 2; $i++) { 
 					for ($x=1; $x < 5; $x++) { 
 						$suma = $total + $rowAnterior[$i][$x];
 						$total = $suma; 
