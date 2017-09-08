@@ -37,18 +37,20 @@
 				$total = 0;
 				$rowAnterior = $anterior->get_TurnoAnterior($turnoAnterior);
 				for ($i=0; $i < 2; $i++) { 
-					for ($x=1; $x < 5; $x++) { 
+					for ($x=2; $x < 6; $x++) { 
 						$suma = $total + $rowAnterior[$i][$x];
 						$total = $suma; 
 					}
 				}
 				$total = $total/2;
+				$idParti = $rowAnterior[0][1];
 				
 	            echo "<h3>".$rowAnterior[0][0]."</h3>";
 	          	echo "<div class='puntos'>";
 	            	echo "<h3>Puntos</h3>";
 	           		echo "<h1><b>".round($total, 2, PHP_ROUND_HALF_UP)."</b></h1>";
 	          	echo "</div><br>";
+	          	$anterior->set_Total($total,$idParti);
 			}
 			break;
 		

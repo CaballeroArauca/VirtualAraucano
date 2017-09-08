@@ -36,7 +36,7 @@ h4{
 .informacion{
 	border: 2px ;
     border-radius: 10px;
-	animation:  fron-m 10s ;
+	
 }
 .despues{
 	background: #fff;
@@ -46,7 +46,7 @@ h4{
 }
 
 .img-infor{
-	animation:  img-e 3s;
+	
 }
 .img-despues{
 	animation: img-p 5s;

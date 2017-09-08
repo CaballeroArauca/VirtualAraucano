@@ -57,6 +57,11 @@
 			return $row;
 		}
 
+		public function set_Total($total,$idParti){
+			$this->_sql="UPDATE `participantes` SET `total` = ".$total." WHERE `participantes`.`id_participante` = ".$idParti."";
+			$this->set_query();
+		}
+
 		public function get_TurnoActual($turno){
 			$this->_sql="SELECT * FROM `participantes` WHERE `turno_grupo` = ".$turno."";
 			$row = $this->get_query();
@@ -98,7 +103,7 @@
 		}
 
 		public function get_TurnoAnterior($turno){
-			$this->_sql = "SELECT `nombres_participante`, `calificacion_1`, `calificacion_2`, `calificacion_3`, `calificacion_4` FROM `calificaciones`, (SELECT `id_participante`, `nombres_participante` FROM `participantes` WHERE `turno_grupo` = ".$turno." )AS tab WHERE `participantes_id_participante` = tab.`id_participante`";
+			$this->_sql = "SELECT `nombres_participante`,`id_participante`, `calificacion_1`, `calificacion_2`, `calificacion_3`, `calificacion_4` FROM `calificaciones`, (SELECT `id_participante`, `nombres_participante` FROM `participantes` WHERE `turno_grupo` = ".$turno." )AS tab WHERE `participantes_id_participante` = tab.`id_participante`";
 			$row = $this->get_query();
 			return $row;
 		}
